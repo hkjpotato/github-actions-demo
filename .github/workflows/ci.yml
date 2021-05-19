@@ -20,7 +20,7 @@ jobs:
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.3 #https://github.com/marketplace/actions/deploy-to-github-pages
-      env:
+      with:
         # env variables
         # https://docs.github.com/en/actions/reference/authentication-in-a-workflow
         # create one from profile and use it in repo
