@@ -14,10 +14,11 @@ jobs:
       uses: actions/checkout@master # github actions to fetch code
 
     - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master #https://github.com/marketplace/actions/deploy-to-github-pages
+      uses: JamesIves/github-pages-deploy-action@4.1.3 #https://github.com/marketplace/actions/deploy-to-github-pages
       env:
         # env variables
         # https://docs.github.com/en/actions/reference/authentication-in-a-workflow
+        # create one from profile and use it in repo
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: build
