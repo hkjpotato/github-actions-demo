@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React & See with actions
+          Learn React & See with actions in gh-pages
         </a>
       </header>
     </div>
