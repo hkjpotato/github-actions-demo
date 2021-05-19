@@ -1,0 +1,24 @@
+name: GitHub Actions Build and Deploy Demo
+# event
+on:
+  # type
+  push:
+    # condition
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # vm
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master # github actions to fetch code
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master #https://github.com/marketplace/actions/deploy-to-github-pages
+      env:
+        # env variables
+        # https://docs.github.com/en/actions/reference/authentication-in-a-workflow
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+        BUILD_SCRIPT: npm install && npm run build
